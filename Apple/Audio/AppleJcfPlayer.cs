@@ -28,6 +28,15 @@ namespace Jammit.Audio
       }
 
       players[media.BackingTrack] = playerFactory(media.BackingTrack, File.OpenRead(Path.Combine(media.Path, $"{media.BackingTrack.Identifier.ToString().ToUpper()}_jcfx")));
+
+      players[media.BackingTrack].CurrentTimeChanged += (sender, e) =>
+      {
+        // Propagate updated time from underlying backing track player.
+        Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>
+        {
+          PositionChanged?.Invoke(this, new EventArgs());
+        });
+      };
     }
 
     #region IJcfPlayer members

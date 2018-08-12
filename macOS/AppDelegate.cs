@@ -40,7 +40,7 @@ namespace Jammit.macOS
           (media) => {
             return new Audio.AppleJcfPlayer(media, (track, stream) =>
             {
-              return new Audio.MacOSAVAudioPlayer(track, stream);
+              return new Audio.MacOSAVAudioPlayer(media, track);
             });
           },
           new Model.FileSystemJcfLoader(dataDir)
