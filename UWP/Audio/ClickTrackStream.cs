@@ -15,7 +15,7 @@ namespace Jammit.Audio
       _beats = beats;
       WaveFormat = new WaveFormat(44100, 16, 2);
       Length = (long)(_beats[_beats.Count - 1].Time*44100*4);
-      var stick = new byte[] { };
+      var stick = new byte[] { }; //TODO:define!
       _click = new short[stick.Length/2];
       Buffer.BlockCopy(stick, 0, _click, 0, stick.Length);
     }

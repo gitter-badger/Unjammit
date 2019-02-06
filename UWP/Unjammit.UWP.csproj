@@ -63,7 +63,6 @@
     </Compile>
     <Compile Include="Audio\ClickTrackStream.cs" />
     <Compile Include="Audio\FFmpegJcfPlayer.cs" />
-    <Compile Include="Audio\Ima4Decoder.cs" />
     <Compile Include="Audio\ImaWaveStream.cs" />
     <Compile Include="Audio\NAudioJcfPlayer.cs" />
     <Compile Include="MainPage.xaml.cs">
