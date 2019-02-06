@@ -61,7 +61,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Audio\ClickTrackStream.cs" />
     <Compile Include="Audio\FFmpegJcfPlayer.cs" />
+    <Compile Include="Audio\Ima4Decoder.cs" />
+    <Compile Include="Audio\ImaWaveStream.cs" />
+    <Compile Include="Audio\NAudioJcfPlayer.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -119,6 +123,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.9</Version>
+    </PackageReference>
+    <PackageReference Include="NAudio">
+      <Version>1.9.0-preview2</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.DeviceInfo">
       <Version>4.1.1</Version>
