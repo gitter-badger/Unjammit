@@ -20,3 +20,5 @@ Please note that if you contribute to this project, you agree that you are licen
 ## Screenshot
 
 ![Current state of the application](https://i.imgur.com/02lWV9h.png)
+
+//TODO: Look for contributors.
