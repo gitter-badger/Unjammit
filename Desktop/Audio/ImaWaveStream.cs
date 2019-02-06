@@ -6,9 +6,9 @@ namespace Jam.NET.Audio
 {
   public class ImaWaveStream : WaveStream
   {
-    private readonly Ima4Decoder _decoder;
+    private readonly Jammit.Audio.Ima4Decoder _decoder;
 
-    public ImaWaveStream(Ima4Decoder d)
+    public ImaWaveStream(Jammit.Audio.Ima4Decoder d)
     {
       _decoder = d;
       WaveFormat = new WaveFormat(44100, 16, 2);
@@ -18,7 +18,7 @@ namespace Jam.NET.Audio
     /// Wrap the array of ADPCM data.
     /// </summary>
     /// <param name="data">ADPCM packets</param>
-    public ImaWaveStream(Stream data) : this(new Ima4Decoder(data)) { }
+    public ImaWaveStream(Stream data) : this(new Jammit.Audio.Ima4Decoder(data)) { }
 
     public override WaveFormat WaveFormat { get; } 
 
