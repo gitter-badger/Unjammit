@@ -34,7 +34,7 @@ namespace Jammit.Audio
         _channels[track] = new WaveChannel32(new ImaWaveStream(stream));
       }
 
-      var backingStream = File.OpenRead(media.Path);
+      var backingStream = File.OpenRead(Path.Combine(media.Path, $"{media.BackingTrack.Identifier}_jcfx"));
       _channels[media.BackingTrack] = new WaveChannel32(new ImaWaveStream(backingStream));
 
       _channels[media.ClickTrack] = new WaveChannel32(new ClickTrackStream(media.Beats));

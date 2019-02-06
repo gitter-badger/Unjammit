@@ -24,7 +24,7 @@ namespace Jammit.UWP
       LoadApplication(
         new Jammit.Forms.App(
           Xamarin.Essentials.FileSystem.AppDataDirectory,
-          (media) => { return new Audio.FFmpegJcfPlayer(media); },
+          (media) => { return new Audio.NAudioJcfPlayer(media); },
           new Model.FileSystemJcfLoader(Xamarin.Essentials.FileSystem.AppDataDirectory)
         )
       );
